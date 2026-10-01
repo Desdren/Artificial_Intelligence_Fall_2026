@@ -1,34 +1,35 @@
-# numpy library basics
-
-
 import numpy as np
 
-arr1 = np.array([11, 13, 17, 19, 23])
+# 1. Create a 1D NumPy array
+arr = np.array([5, 10, 15, 20, 25])
 
-# basic properties of the array
-print("Array:", arr1)
-print("Shape:", arr1.shape)
-print("Dimensions:", arr1.ndim)
-print("Size:", arr1.size)
-print("Data type:", arr1.dtype)
+# 2. Display array details
+print("Array:", arr)
+print("Shape:", arr.shape)
+print("Number of dimensions:", arr.ndim)
+print("Size:", arr.size)
+print("Data type:", arr.dtype)
 
-# adding and multiplying array with scalar values
-arr_add10 = arr1 + 10
-print("Add 10 to every element:", arr_add10)
+# 3. Add 10 to every element
+added = arr + 10
+print("\nAfter adding 10:", added)
 
-arr_mul3 = arr1 * 3
-print("Multiply every element by 3:", arr_mul3)
+# 4. Multiply every element by 3
+multiplied = arr * 3
+print("After multiplying by 3:", multiplied)
 
-# basic statistical operations
-print("Sum:", arr1.sum())
-print("Mean:", arr1.mean())
-print("Maximum:", arr1.max())
-print("Minimum:", arr1.min())
+# 5. Sum, Mean, Maximum, Minimum
+print("\nSum:", np.sum(arr))
+print("Mean:", np.mean(arr))
+print("Maximum:", np.max(arr))
+print("Minimum:", np.min(arr))
 
-arr2 = np.array([9, 19, 29, 39, 49])
+# 6. Create another array
+arr2 = np.array([2, 4, 6, 8, 10])
+print("\nSecond array:", arr2)
 
-# element-wise operations between two arrays
-print("Element-wise Addition:", arr1 + arr2)
-print("Element-wise Subtraction:", arr1 - arr2)
-print("Element-wise Multiplication:", arr1 * arr2)
-print("Element-wise Division:", arr1 / arr2)
+# 7. Element-wise operations
+print("Addition:", arr + arr2)
+print("Subtraction:", arr - arr2)
+print("Multiplication:", arr * arr2)
+print("Division:", arr / arr2)
